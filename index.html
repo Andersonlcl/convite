@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+
+    <style>
+        body {
+            /* background-color: rgb(224, 146, 240); */
+            background-image: url(./img/halloween-origem.webp);
+            background-size: cover; /* Cobre toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita repetição */
+            height: 110vh; /* Altura da tela */
+            margin: 0; /* Remove margens padrão */
+            display: flex; /* Flexbox para centralizar */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+
+        .painel {
+            background-color: black;
+            width: 90%; /* Largura responsiva */
+            max-width: 500px; /* Largura máxima */
+            height: 600px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 0px;
+            font-family: "Abril Fatface", serif;
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+        }
+
+        h1 {
+            font-size: 21px; /* Tamanho do texto do h1 */
+            margin: 10px; /* Margem para espaçamento */
+        }
+
+        h2 {
+            font-size: 20px; /* Tamanho do texto do h2 */
+            margin: 5px; /* Margem para espaçamento */
+        }
+
+        #sim {
+            height: 40px;
+            width: 80px; /* Largura do botão maior para melhor toque */
+            background-color: rgb(255, 151, 32);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin: 10px; /* Margem para espaçamento */
+        }
+
+        #nao {
+            position: absolute;
+            height: 40px;
+            width: 80px; /* Largura do botão maior para melhor toque */
+            background-color: rgb(255, 151, 32);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px; /* Adicionando espaço em cima */
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        
+        <h1>Olá, mis amores! ✨🔮
+            Vou comemorar meu aniversário no sábado e amaria a presença de vocês! 
+            Bora fazer a farra comigo, suas Safadas!🫦😈</h1>
+
+        <img src="./img/gif.gif" alt="" style="max-width: 100%; height: auto;"> <!-- Imagem responsiva -->
+
+        <h2>12 DE OUTUBRO</h2>
+        <h2>ÀS 18H:30</h2>
+        <h2>TROPICANOS, RUA JOÃO CARVALHO, 785</h2>
+        <h2>VOCÊ VEM?</h2>
+
+        <a href="https://wa.me/5585997785740?text=estarei%20lá" target="_blank">
+            <button id="sim">Sim!</button>
+        </a>
+        <button onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao");
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+</html>
